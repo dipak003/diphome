@@ -91,13 +91,34 @@ services:
         keywords: "Synology Photos and memories" # optional keyword used for searching purpose
         url: "https://dipnas.local/photos/"
         target: "Photos" # optional html tag target attribute
-      - name: "Photoprism"
-        logo: "assets/tools/sample2.png"
-        subtitle: "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web"
-        tag: "app"
+      - name: "Jellyfin"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/jellyfin-white-logo.png"
+        subtitle: "Jellyfin is media server and suite of multimedia applications"
+        tag: "movies"
         # Optional tagstyle
         tagstyle: "is-success"
-        url: "#"
+        url: "http://dipnas.local:8096/web/index.html#!/home.html"
+      - name: "Photoprism"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/photoprism-logo.png"
+        subtitle: "PhotoPrism is an AI-Powered Photos App for the Decentralized Web"
+        tag: "photos"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "http://dipnas.local:8082/library/albums"
+      - name: "Photoprism2"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/photoprism-logo.png"
+        subtitle: "PhotoPrism is an AI-Powered Photos App for the Decentralized Web"
+        tag: "photos"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "http://dipnas.local:8083/library/albums"
+      - name: "Audio station"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-audiostation.png"
+        subtitle: "Synology audio station or music station"
+        tag: "audio"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "https://dipnas.local/audio/"
   - name: "Application"
     icon: "fas fa-code-branch"
     # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
@@ -108,31 +129,53 @@ services:
         # Alternatively a fa icon can be provided:
         # icon: "fab fa-jenkins"
         subtitle: "Synology DiskStation Manager (DSM)"
-        tag: "app"
+        tag: "dsm"
         tagstyle: "is-primary"
         keywords: "self hosted reddit" # optional keyword used for searching purpose
         url: "http://dipnas.local/"
         target: "DSM" # optional html tag target attribute
-      - name: "Another one"
-        logo: "assets/tools/sample2.png"
-        subtitle: "Another application"
+      - name: "Synology Files"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-filestation.png"
+        subtitle: "Synology File server"
+        tag: "files"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "https://dipnas.local/files/"
+      - name: "Synology Drive"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-drive.png"
+        subtitle: "Synology Drive"
         tag: "app"
         # Optional tagstyle
         tagstyle: "is-success"
-        url: "#"
+        url: "https://dipnas.local/drive/"
+      - name: "Download station"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-downloadstation.png"
+        subtitle: "Synology download station"
+        tag: "app"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "https://dipnas.local/download/"
   - name: "Administration"
     icon: "fa fa-cog fa-spin fa-1x fa-fw"
     items:
       - name: "Synology DSM"
         logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-dsm-icon.png"
         # Alternatively a fa icon can be provided:
-        # icon: "fab fa-jenkins"
+        #icon: "fab fa-jenkins"
         subtitle: "Synology DiskStation Manager (DSM)"
-        tag: "app"
+        tag: "dsm"
         tagstyle: "is-primary"
         keywords: "self hosted reddit" # optional keyword used for searching purpose
         url: "http://dipnas.local/"
         target: "DSM" # optional html tag target attribute
+      - name: "Synology Active Backup"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-active-backup-logo.png"
+        subtitle: "Synology active backup for business"
+        tag: "backup"
+        tagstyle: "is-primary"
+        keywords: "self hosted reddit" # optional keyword used for searching purpose
+        url: "https://dipnas.local/activebackup/"
+        target: "active backup" # optional html tag target attribute
       - name: "Portainer"
         logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/portainer-logo.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
