@@ -9,7 +9,7 @@
 title: "DipNas dashboard"
 subtitle: "Welcome"
 # documentTitle: "Welcome" # Customize the browser tab text
-logo: "/volumeUSB1/usbshare/docker2/homer/assets/logo.png"
+logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/assets/logo.png"
 # Alternatively a fa icon can be provided:
 # icon: "fas fa-skull-crossbones"
 
@@ -37,8 +37,8 @@ theme: default # 'default' or one of the themes available in 'src/assets/themes'
 
 # Optional custom stylesheet
 # Will load custom CSS files. Especially useful for custom icon sets.
-# stylesheet:
-#   - "assets/custom.css"
+stylesheet:
+  - "https://raw.githubusercontent.com/dipak003/diphome/main/resources/assets/themes/custom.css"
 
 # Here is the exhaustive list of customization parameters
 # However all value are optional and will fallback to default if not set.
@@ -77,20 +77,42 @@ colors:
 # First level array represents a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
+  - name: "Media & Services"
+    icon: "fa-solid fa-photo-film"
+    # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
+    # logo: "path/to/logo"
+    items:
+      - name: "Synology Photos"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-photos.png"
+        # Alternatively a fa icon can be provided:
+        # icon: "fab fa-jenkins"
+        subtitle: "Synology Photos"
+        tag: "photos"
+        keywords: "Synology Photos and memories" # optional keyword used for searching purpose
+        url: "https://dipnas.local/photos/"
+        target: "Photos" # optional html tag target attribute
+      - name: "Photoprism"
+        logo: "assets/tools/sample2.png"
+        subtitle: "PhotoPrism® is an AI-Powered Photos App for the Decentralized Web"
+        tag: "app"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "#"
   - name: "Application"
     icon: "fas fa-code-branch"
     # A path to an image can also be provided. Note that icon take precedence if both icon and logo are set.
     # logo: "path/to/logo"
     items:
-      - name: "Awesome app"
-        logo: "assets/tools/sample.png"
+      - name: "Synology DSM"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-dsm-icon.png"
         # Alternatively a fa icon can be provided:
         # icon: "fab fa-jenkins"
-        subtitle: "Bookmark example"
+        subtitle: "Synology DiskStation Manager (DSM)"
         tag: "app"
+        tagstyle: "is-primary"
         keywords: "self hosted reddit" # optional keyword used for searching purpose
-        url: "https://www.reddit.com/r/selfhosted/"
-        target: "_blank" # optional html tag target attribute
+        url: "http://dipnas.local/"
+        target: "DSM" # optional html tag target attribute
       - name: "Another one"
         logo: "assets/tools/sample2.png"
         subtitle: "Another application"
@@ -98,15 +120,25 @@ services:
         # Optional tagstyle
         tagstyle: "is-success"
         url: "#"
-  - name: "Other group"
-    icon: "fas fa-heartbeat"
+  - name: "Administration"
+    icon: "fa fa-cog fa-spin fa-1x fa-fw"
     items:
-      - name: "Pi-hole"
-        logo: "assets/tools/sample.png"
+      - name: "Synology DSM"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/synology-dsm-icon.png"
+        # Alternatively a fa icon can be provided:
+        # icon: "fab fa-jenkins"
+        subtitle: "Synology DiskStation Manager (DSM)"
+        tag: "app"
+        tagstyle: "is-primary"
+        keywords: "self hosted reddit" # optional keyword used for searching purpose
+        url: "http://dipnas.local/"
+        target: "DSM" # optional html tag target attribute
+      - name: "Portainer"
+        logo: "https://raw.githubusercontent.com/dipak003/diphome/main/resources/icons/portainer-logo.png"
         # subtitle: "Network-wide Ad Blocking" # optional, if no subtitle is defined, PiHole statistics will be shown
-        tag: "other"
-        url: "http://192.168.0.151/admin"
-        type: "PiHole" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
-        target: "_blank" # optional html a tag target attribute
+        tag: "app"
+        url: "https://dipnas.local:9443/#!/home"
+        type: "Portainer" # optional, loads a specific component that provides extra features. MUST MATCH a file name (without file extension) available in `src/components/services`
+        target: "Portainer" # optional html a tag target attribute
         # class: "green" # optional custom CSS class for card, useful with custom stylesheet
         # background: red # optional color for card to set color directly without custom stylesheet
